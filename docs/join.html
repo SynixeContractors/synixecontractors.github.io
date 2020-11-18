@@ -184,7 +184,7 @@
             minute: 00,
             second: 00,
         });
-        var local = friday.tz('Australia/Melbourne');
+        var local = friday.tz(moment.tz.guess());
         $("#friday-day").html(local.format("dddd"));
         $("#friday-time").html(local.format("h:mm a z"));
 
@@ -194,7 +194,7 @@
             minute: 00,
             second: 00,
         });
-        var local = saturday.tz('Australia/Melbourne');
+        var local = saturday.tz(moment.tz.guess());
         $("#saturday-day").html(local.format("dddd"));
         $("#saturday-time").html(local.format("h:mm a z"));
     </script>
