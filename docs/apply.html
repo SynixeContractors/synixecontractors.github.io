@@ -64,7 +64,7 @@
     <!-- Start team Area -->
     <section class="team-area mt-40 team-page-teams" id="team">
         <div class="container">
-            <form>
+            <form onsubmit="sendApplication()">
                 <div class="form-group">
                     <label for="inUsername">Discord Username</label>
                     <input class="form-control" id="inUsername" placeholder="Username#0000" required>
@@ -153,7 +153,7 @@
                     <input class="form-control" id="inHear">
                     <small class="form-text text-muted">This field is optional</small>
                 </div>
-                <button type="button" class="btn btn-primary" id="send" onclick="sendApplication()">Submit</button>
+                <button type="submit" class="btn btn-primary" id="send">Submit</button>
                 <span style="color:red" id="message"></span>
             </form>
         </div>
@@ -234,7 +234,7 @@
                     $("#send").text("Sent!").prop('disabled', true).css('background-color', 'green');
                     $("#message").text("");
                 } else {
-                    $("#message").text("Missing required fields");
+                    $("#message").text("Failed to submit");
                 }
             }
 
