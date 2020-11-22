@@ -194,10 +194,6 @@
                         value: $("#age18").is(':checked').toString(),
                     },
                     {
-                        name: "Why Apply?",
-                        value: $("#inWhyApply").val(),
-                    },
-                    {
                         name: "Experience",
                         value: $("#inExperience").val(),
                     },
@@ -215,18 +211,25 @@
                     },
                     {
                         name: "Familiar Mods",
-                        value: ($("#modACE").is(':checked') ? '[ACE] ' : '') + ($("#modACRE").is(':checked') ? '[TFAR / ACRE] ' : '')
+                        value: 'Checked: ' + ($("#modACE").is(':checked') ? '[ACE] ' : '') + ($("#modACRE").is(':checked') ? '[TFAR / ACRE] ' : '')
                     },
                     {
                         name: "How did you hear about us?",
                         value: $("#inHear").is(':checked').toString(),
-                    },
+                    }
                 ]
+            }
+
+            if ($("#inWhyApply").val() !== "") {
+                myEmbed.fields.push({
+                    name: "Why Apply?",
+                    value: $("#inWhyApply").val(),
+                });
             }
 
             var params = {
                 username: "Website Applications",
-                embeds: [ myEmbed ]
+                embeds: [ myEmbed ],
             }
 
             request.onreadystatechange = function(e) { // Call a function when the state changes.
@@ -238,7 +241,7 @@
                     $("#message").text("Failed to submit");
                 }
             }
-            console.log(params);
+            console.log(JSON.stringify(params));
             request.send(JSON.stringify(params));
 	    return false;
         }
