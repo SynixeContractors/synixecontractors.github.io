@@ -233,7 +233,6 @@
             }
 
             request.onreadystatechange = function(e) { // Call a function when the state changes.
-		console.log(e);
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 204) {
                     $("#send").text("Sent!").prop('disabled', true).css('background-color', 'green');
                     $("#message").text("");
@@ -241,7 +240,6 @@
                     $("#message").text("Failed to submit");
                 }
             }
-            console.log(JSON.stringify(params));
             request.send(JSON.stringify(params));
 	    return false;
         }
