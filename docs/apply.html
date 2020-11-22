@@ -238,7 +238,7 @@
                     $("#message").text("Failed to submit");
                 }
             }
-
+            console.log(params);
             request.send(JSON.stringify(params));
 	    return false;
         }
