@@ -38,7 +38,7 @@ function list(x){
     textContainer.innerHTML += "<p>" + certs.join(" | ") + "</p>";
 
     Object.keys(roles).forEach((role) => {
-      if (user.roles[0] == roles[role]) {
+      if (user.roles.includes(roles[role])) {
         document.getElementById(role).appendChild(iDiv);
       }
     });
