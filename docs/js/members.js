@@ -37,11 +37,15 @@ function list(x){
 
     textContainer.innerHTML += "<p>" + certs.join(" | ") + "</p>";
 
-    Object.keys(roles).forEach((role) => {
-      if (user.roles.includes(roles[role])) {
-        document.getElementById(role).appendChild(iDiv);
-      }
-    });
+    if (user.roles.includes(roles.staff)) {
+      document.getElementById("staff").appendChild(iDiv);
+    } else {
+      Object.keys(roles).forEach((role) => {
+        if (user.roles.includes(roles[role])) {
+          document.getElementById(role).appendChild(iDiv);
+        }
+      });
+    }
   });
 }
 fetch('https://cors-anywhere.herokuapp.com/https://dev.dynulo.com/v1/bot/discord/guild/700888247928356905/members')
