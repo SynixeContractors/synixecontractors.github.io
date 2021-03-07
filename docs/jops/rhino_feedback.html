@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Synixe Contractors</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header id="header" id="home">
+		<div class="container header-top">
+			<div class="row">
+				<div class="col-6 top-head-left">
+					<ul>
+						<li>
+							<a href="https://discord.gg/SZhzv6z"><i class="fab fa-discord"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="index.html">Home</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="join.html">Join</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+    <!-- start banner Area -->
+    <section class="banner-area relative" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Operation Rhino - Feedback
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start team Area -->
+    <section class="team-area mt-40 team-page-teams" id="team">
+        <div class="container">
+            <a href="./rhino.html">Back to Gallery</a>
+            <form onsubmit="return sendApplication();">
+                <div class="form-group">
+                    <label for="inName">Unit Code:</label>
+                    <input class="form-control" id="inCode" required>
+                </div>
+                <div class="form-group">
+                    <label for="inFeedback">What feedback do you have from the Operation?</label>
+                    <textarea class="form-control" id="inFeedback" rows="9"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="send">Submit</button>
+                <span style="color:red" id="message"></span>
+            </form>
+            <a href="./rhino.html">Back to Gallery</a>
+        </div>
+    </section>
+    <!-- End team Area -->
+
+    <footer style="text-align: center; opacity: 60%;">
+		Copyright &copy;
+		<script>
+			document.write(new Date().getFullYear());
+		</script>
+		All rights reserved | This template is made by
+		<a href="https://colorlib.com" target="_blank" style="color: #777777;">Colorlib</a>
+	</footer>
+
+    <script src="/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        function sendApplication() {
+            var request = new XMLHttpRequest();
+            let hook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvODE3OTE0MDQ0NDM4Njc1NDc2L0pmZktFYWJBa3Nabmt6bkVCbTZ4MVpXcGdfRUpEWnVjNC1BN2hYaERRTC0xZmRfQ2E0TnNrcmFXVHFsUy1MTjE3VmlD";
+            request.open("POST", atob(hook));
+            // again, replace the url in the open method with yours
+            request.setRequestHeader('Content-type', 'application/json');
+
+            var params = {
+                username: "Feedback - " + $("#inCode").val(),
+                content: $("#inFeedback").val(),
+            }
+
+            request.onreadystatechange = function(e) { // Call a function when the state changes.
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 204) {
+                    $("#send").text("Sent!").prop('disabled', true).css('background-color', 'green');
+                    $("#message").text("");
+                } else {
+                    $("#message").text("Failed to submit");
+                }
+            }
+            request.send(JSON.stringify(params));
+        return false;
+        }
+    </script>
+</body>
+
+</html>
