@@ -4,7 +4,7 @@ roles = {
   members: 700954650026704906,
   juniors: 700892097775009842,
 };
-certsList = [[780136967677411389, "Medic"], [780138101834121236, "Grenadier"], [780136990405296128, "EOD"], [780137042180046848, "Autorifleman"], [780137008411705375, "Marksman"]]
+certsList = [[780136967677411389, "Medic"], [780137042180046848, "Autorifleman"], [780137008411705375, "Marksman"], [814987669921726514, "Engineer"], [780138101834121236, "Grenadier"]]
 
 function list(x){
   x.forEach((user) => {
