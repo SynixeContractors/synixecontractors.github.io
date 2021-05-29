@@ -79,14 +79,12 @@
                 </div>
                 <div class="row justify-content-center" style="font-size: 1.3rem">
                     <div class="col-md-6 text-center">
-                        <h4>Main Contracts</h4>
-                        <b id="saturday-day"></b>
-                        <p id="saturday-time"></p>
-                    </div>
-                    <div class="col-md-6 text-center">
-                        <h4>Sub Contracts</h4>
                         <b id="friday-day"></b>
                         <p id="friday-time"></p>
+                    </div>
+                    <div class="col-md-6 text-center">
+			<b id="saturday-day"></b>
+                        <p id="saturday-time"></p>
                     </div>
                 </div>
                 <h3 class="mb-30">Teamwork</h3>
@@ -190,7 +188,7 @@
 
         var saturday = moment.tz(findNext("saturday"), "America/New_York");
         saturday.set({
-            hour: 21,
+            hour: 22,
             minute: 00,
             second: 00,
         });
