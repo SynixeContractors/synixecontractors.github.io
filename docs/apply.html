@@ -136,7 +136,7 @@
                     <label for="inApex">Do you own Apex DLC or are willing to purchase it?</label>
                     <br/>
                     <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inApex" value="yes" id="apexYes" checked>
+                    <input class="form-check-input" type="radio" name="inApex" value="yes" id="apexYes">
                     <label class="form-check-label"  for="apexYes">
                         Yes
                     </label>
@@ -144,6 +144,22 @@
                     <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inApex" value="no" id="apexNo">
                     <label class="form-check-label" for="apexNo">
+                        No
+                    </label>
+                    </div>
+                </div>
+		<div class="form-group">
+                    <label for="inWS">Do you own Western Sahara CDLC or are willing to purchase it?</label>
+                    <br/>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inWS" value="yes" id="wsYes">
+                    <label class="form-check-label"  for="wsYes">
+                        Yes
+                    </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inWS" value="no" id="wsNo">
+                    <label class="form-check-label" for="wsNo">
                         No
                     </label>
                     </div>
@@ -208,6 +224,10 @@
                     {
                         name: "Has Apex",
                         value: $("#apexYes").is(':checked').toString(),
+                    },
+                    {
+                        name: "Has WS",
+                        value: $("#wsYes").is(':checked').toString(),
                     },
                     {
                         name: "Familiar Mods",
