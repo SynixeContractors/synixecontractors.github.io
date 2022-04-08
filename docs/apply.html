@@ -233,10 +233,6 @@
                         name: "Familiar Mods",
                         value: 'Checked: ' + ($("#modACE").is(':checked') ? '[ACE] ' : '') + ($("#modACRE").is(':checked') ? '[TFAR / ACRE] ' : '')
                     },
-                    {
-                        name: "How did you hear about us?",
-                        value: $("#inHear").val(),
-                    }
                 ]
             }
 
@@ -244,6 +240,12 @@
                 myEmbed.fields.push({
                     name: "Why Apply?",
                     value: $("#inWhyApply").val(),
+                });
+            }
+            if ($("#inHear").val() !== "") {
+                myEmbed.fields.push({
+                    name: "How did you hear about us?",
+                    value: $("#inHear").val(),
                 });
             }
 
@@ -261,7 +263,7 @@
                 }
             }
             request.send(JSON.stringify(params));
-	    return false;
+        return false;
         }
     </script>
 </body>
