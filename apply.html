@@ -1,0 +1,196 @@
+---
+---
+<form onsubmit="return sendApplication();">
+    <div class="form-group">
+        <label for="inUsername">Discord Username</label>
+        <input class="form-control" id="inUsername" placeholder="Username#0000" required>
+        <small class="form-text text-muted">We will send you a friend request if you aren't in our Discord</small>
+    </div>
+    <div class="form-group">
+        <label for="inName">Name</label>
+        <input class="form-control" id="inName" placeholder="First Last" required>
+        <small class="form-text text-muted">Does not need to be your real name, avoid the names of public figures.</small>
+    </div>
+    <div class="form-group">
+        <label for="inAge">How old are you?</label>
+        <br/>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inAge" value="yes" id="age16" checked>
+        <label class="form-check-label"  for="age16">
+            16+
+        </label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inAge" value="no" id="age18">
+        <label class="form-check-label" for="age18">
+            18+
+        </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inWhyApply">Why are you applying for Synixe Contractors?</label>
+        <input class="form-control" id="inWhyApply">
+        <small class="form-text text-muted">This field is optional</small>
+    </div>
+    <div class="form-group">
+        <label for="inExperience">What experience do you have playing Arma 3?</label>
+        <textarea class="form-control" id="inExperience" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="inPlaystyle">How would you describe your playstyle?</label>
+        <textarea class="form-control" id="inPlaystyle" rows="3" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="inMods">Are you familiar with the following mods?</label>
+        <br/>
+        <small class="form-text text-muted">Check all that apply</small>
+        <br/>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="modACE">
+            <label class="form-check-label" for="modACE">ACE</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="modACRE">
+            <label class="form-check-label" for="modACRE">TFAR / ACRE</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inMicrophone">Do you have a microphone?</label>
+        <br/>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inMicrophone" value="yes" id="micYes" checked>
+        <label class="form-check-label" for="micYes">
+            Yes
+        </label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inMicrophone" value="no" id="micNo">
+        <label class="form-check-label" for="micNo">
+            No
+        </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inApex">Do you own Apex DLC or are willing to purchase it?</label>
+        <br/>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inApex" value="yes" id="apexYes">
+        <label class="form-check-label"  for="apexYes">
+            Yes
+        </label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inApex" value="no" id="apexNo">
+        <label class="form-check-label" for="apexNo">
+            No
+        </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inWS">Do you own Western Sahara CDLC or are willing to purchase it?</label>
+        <br/>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inWS" value="yes" id="wsYes">
+        <label class="form-check-label"  for="wsYes">
+            Yes
+        </label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inWS" value="no" id="wsNo">
+        <label class="form-check-label" for="wsNo">
+            No
+        </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inHear">How did you hear about us?</label>
+        <input class="form-control" id="inHear">
+        <small class="form-text text-muted">This field is optional</small>
+    </div>
+    <button type="submit" class="btn btn-primary" id="send">Submit</button>
+    <span style="color:red" id="message"></span>
+</form>
+<script>
+    function sendApplication() {
+        var request = new XMLHttpRequest();
+        let hook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTE3MTA4MTM4ODE2MTg4NDY3L0UySTBJVW1xemFkNU5seWQ0cmF3TDVrak9STjR3d2s4RGJ6Qi1sN3JsbTBaYkh0ZDJXMHprSkQ1Zkx5VXM1RW5VeFBp";
+        request.open("POST", atob(hook));
+        // again, replace the url in the open method with yours
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var myEmbed = {
+            author: {
+                name: $("#inName").val()
+            },
+            title: $("#inUsername").val(),
+            fields: [
+                {
+                    name: "18+",
+                    value: $("#age18").is(':checked').toString(),
+                },
+                {
+                    name: "Experience",
+                    value: $("#inExperience").val(),
+                },
+                {
+                    name: "Playstyle",
+                    value: $("#inPlaystyle").val(),
+                },
+                {
+                    name: "Microphone",
+                    value: $("#micYes").is(':checked').toString(),
+                },
+                {
+                    name: "Has Apex",
+                    value: $("#apexYes").is(':checked').toString(),
+                },
+                {
+                    name: "Has WS",
+                    value: $("#wsYes").is(':checked').toString(),
+                },
+                {
+                    name: "Familiar Mods",
+                    value: 'Checked: ' + ($("#modACE").is(':checked') ? '[ACE] ' : '') + ($("#modACRE").is(':checked') ? '[TFAR / ACRE] ' : '')
+                },
+            ]
+        }
+
+        if ($("#inWhyApply").val() !== "") {
+            myEmbed.fields.push({
+                name: "Why Apply?",
+                value: $("#inWhyApply").val(),
+            });
+        }
+        if ($("#inHear").val() !== "") {
+            myEmbed.fields.push({
+                name: "How did you hear about us?",
+                value: $("#inHear").val(),
+            });
+        }
+
+        if (!myEmbed.title.includes('#')) {
+            $("#message").text("Your discord name needs to include the discriminator. ex: Name#1234");
+            return false;
+        }
+
+        if (!myEmbed.author.name.includes(' ')) {
+            $("#message").text("Your name should be in the `First Last` format");
+            return false;
+        }
+
+        var params = {
+            username: "Website Applications",
+            embeds: [ myEmbed ],
+        }
+
+        request.onreadystatechange = function(e) { // Call a function when the state changes.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 204) {
+                window.location = '/sent';
+            } else {
+                $("#message").text("Failed to submit");
+            }
+        }
+        request.send(JSON.stringify(params));
+        return false;
+    }
+</script>
