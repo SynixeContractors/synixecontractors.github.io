@@ -7,6 +7,7 @@ With the Foreign Interests theatre, set in Sefrou-Ramal, coming to a close Synix
      alt="Arsey, looking at the horizon"
      style="width:968px;height:auto" />
 *Company treasurer Arsey Johnson during a contract*
+
 ## Theatre Background
 
 <img src="/assets/img/posts/2022-08-28-foreign-interests-end/brett.webp"
