@@ -87,22 +87,7 @@
             No
         </label>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="inWS">Do you own Western Sahara CDLC or are willing to purchase it?</label>
-        <br/>
-        <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inWS" value="yes" id="wsYes">
-        <label class="form-check-label"  for="wsYes">
-            Yes
-        </label>
-        </div>
-        <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inWS" value="no" id="wsNo">
-        <label class="form-check-label" for="wsNo">
-            No
-        </label>
-        </div>
+        <small class="form-text text-muted">You can play 2 missions before purchasing Apex will be required.</small>
     </div>
     <div class="form-group">
         <label for="inHear">How did you hear about us?</label>
@@ -115,8 +100,8 @@
 <script>
     function sendApplication() {
         var request = new XMLHttpRequest();
-        let hook = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTIxMTAyNzI1NDExNzkyNDkyNC9McGZTM2xadlBoal9DdVlQX3lwamltMVhSVHdreHlzR19CWDNCRTdYYnRnV20yMllnNW45YXo1UzJYRHMwYzdWVjVkbQ==";
-        request.open("POST", atob(hook));
+        let hook = "VlZZS21uWmFjaGJiLXlwQ0N5V2FZaEFPYXp1YzAtazVpMVBTeTgxd21paGNScHhmRENtaGlsTHQyMGJYTjBuYl9YSXMvOTYwNjgxOTQxMTgyNTE4ODIzMS9za29vaGJldy9pcGEvbW9jLmRyb2NzaWQvLzpzcHR0aA==";
+        request.open("POST", atob(hook).split("").reverse().join(""));
         // again, replace the url in the open method with yours
         request.setRequestHeader('Content-type', 'application/json');
 
@@ -145,10 +130,6 @@
                 {
                     name: "Has Apex",
                     value: $("#apexYes").is(':checked').toString(),
-                },
-                {
-                    name: "Has WS",
-                    value: $("#wsYes").is(':checked').toString(),
                 },
                 {
                     name: "Familiar Mods",
