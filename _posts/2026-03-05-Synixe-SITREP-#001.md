@@ -3,14 +3,12 @@ author: curio
 ---
 ## About the Synixe SITREP
 
-<img src="/assets/img/synixsitrepimg/001img/sitrep001.webp"
+<img src="/assets/img/synixsitrepimg/001img/sitrep001.jpg"
      alt="Contractors in front of a LUT" 
      style="width:968px;height:auto" />
-*Contractors preparing to return to base in Takistan* 
+*Contractors preparing to return to base in Takistan*
 
-This marks the first official Synixe SITREP.
-
-Going forward, each SITREP will provide:
+This marks the first official Synixe SITREP. Going forward, each SITREP will provide:
 
 - A summary of our current theatre, campaign, or operational focus
 - Monthly contract statistics and attendance averages
@@ -32,9 +30,10 @@ This system allows us to measure engagement without placing pressure on individu
 **Operational Phase:** Concluded  
 **Current Focus:** Standard Contracts   
 
-<img src="/assets/img/synixsitrepimg/001img/theincident.webp"
+<img src="/assets/img/synixsitrepimg/001img/theincident.jpg"
      alt="The Aftermath of The Incident" 
      style="width:968px;height:auto" />
+     
 *The incident that preceded Synixe's dismissal from Takistan* 
 
 With our time in Takistan coming to a halt, Synixe returns to regular contracted work. Our time in Takistan tested us, sharpened us, and at times pushed us further than expected. While we did not leave the theatre under ideal conditions, we left at the right time before things could get any worse. 
@@ -55,7 +54,7 @@ March will be about shaking off rust, reestablishing rhythm, and setting the ton
 
 ## Member Spotlight
 
-<img src="/assets/img/synixsitrepimg/001img/curio-image.webp"
+<img src="/assets/img/synixsitrepimg/001img/curio-image.png"
      alt="Noah Curio"
      style="width:968px;height:auto" />
 *Member – Noah Curio*
@@ -72,9 +71,12 @@ Teamwork is essential. As Brett Harrison once said, “You win as a team, you lo
 **What are you looking forward to next month?**  
 I’m hoping we can all shake off the rust coming into March, get our gear sorted after the reset, and see some new faces joining us for future contracts and possibly campaigns.
 
+**What inspired the Synixe SITREP?**
+Ultimately, I plan on using it as a way to show my love and appreciation for the community that Synixe has built, as well as using this platform to keep that very same community engaged! This is my first time doing something like this, so I hope everyone has enjoyed so far!
+
 ## Looking Ahead
 
-<img src="/assets/img/synixsitrepimg/001img/philnoah.webp"
+<img src="/assets/img/synixsitrepimg/001img/philnoah.png"
      alt="Contractors holding security"
      style="width:968px;height:auto" />
 *Contractors Philippe Connect and Noah Curio providing security*
