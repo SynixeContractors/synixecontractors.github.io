@@ -3,7 +3,7 @@ author: curio
 ---
 ## About the Synixe SITREP
 
-<img src="/assets/img/synixsitrepimg/001img/sitrep001.jpg"
+<img src="/assets/img/synixsitrepimg/001img/sitrep001.webp"
      alt="Contractors in front of a LUT" 
      style="width:968px;height:auto" />
 *Contractors preparing to return to base in Takistan*
@@ -30,7 +30,7 @@ This system allows us to measure engagement without placing pressure on individu
 **Operational Phase:** Concluded  
 **Current Focus:** Standard Contracts   
 
-<img src="/assets/img/synixsitrepimg/001img/theincident.jpg"
+<img src="/assets/img/synixsitrepimg/001img/theincident.webp"
      alt="The Aftermath of The Incident" 
      style="width:968px;height:auto" />
      
@@ -54,7 +54,7 @@ March will be about shaking off rust, reestablishing rhythm, and setting the ton
 
 ## Member Spotlight
 
-<img src="/assets/img/synixsitrepimg/001img/curio-image.png"
+<img src="/assets/img/synixsitrepimg/001img/curio-image.webp"
      alt="Noah Curio"
      style="width:968px;height:auto" />
 *Member – Noah Curio*
@@ -76,7 +76,7 @@ Ultimately, I plan on using it as a way to show my love and appreciation for the
 
 ## Looking Ahead
 
-<img src="/assets/img/synixsitrepimg/001img/philnoah.png"
+<img src="/assets/img/synixsitrepimg/001img/philnoah.webp"
      alt="Contractors holding security"
      style="width:968px;height:auto" />
 *Contractors Philippe Connect and Noah Curio providing security*
