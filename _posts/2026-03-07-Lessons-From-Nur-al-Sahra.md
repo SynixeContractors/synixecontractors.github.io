@@ -1,6 +1,8 @@
 ---
 author: curio 
 ---
+A reflection on the lessons learned from our deployment in Takistan and how we can apply them moving forward.
+
 ## About Nur al-Sahra
 
 <img src="/assets/img/posts/2026-03-07-Lessons-From-Nur-al-Sahra/sitrep001.webp"
